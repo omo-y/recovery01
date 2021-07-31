@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { UsericonWithinName } from "../../../molecules/UserIconWithinName";
 import { Card } from "../../atoms/card/Card";
 export const UserCard = (props) => {
   const { user } = props;
   return (
     <Card>
-      <img height={120} width={150} src={user.image} alt={user.name} />
+      <UsericonWithinName image={user.image} name={user.name} />
       <SDL>
         <p>{user.name}</p>
         <dl>
@@ -14,7 +15,7 @@ export const UserCard = (props) => {
           <dd>{user.phone}</dd>
           <dt>会社名</dt>
           <dd>{user.company.name}</dd>
-          <dt>webアドレス</dt>
+          <dt>web add</dt>
           <dd>{user.website}</dd>
         </dl>
       </SDL>
@@ -27,7 +28,8 @@ dt {
  float: left;
 }
 dd{
-  padding-left: 32px;
+  padding-left: 50px;
   padding-bottom 8px;
+  overflow-wrap:break-word;
 }
 `;
